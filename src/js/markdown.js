@@ -1,10 +1,11 @@
 import MarkdownIt from 'markdown-it';
+import MarkdownItKatex from 'markdown-it-katex';
 import fm from 'front-matter';
 import Immutable from 'immutable';
 
 import { codeToText } from './util';
 
-const markdownIt = new MarkdownIt();
+const markdownIt = new MarkdownIt().use(MarkdownItKatex);
 
 /*
  * Extracts a code block (Immutable Map) from the
