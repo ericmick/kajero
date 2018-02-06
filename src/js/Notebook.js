@@ -23,7 +23,7 @@ class Notebook extends Component {
         this.props.dispatch(fetchData());
     }
 
-    deselectBlocks() {
+    deselectBlocks(e) {
         this.props.dispatch(editBlock(null));
     }
 
@@ -45,7 +45,7 @@ class Notebook extends Component {
         );
         const content = saving ? saveView : notebookView;
         return (
-            <div className="pure-g" onClick={this.deselectBlocks}>
+            <div className="pure-g" onMouseDown={this.deselectBlocks}>
                 <div className="offset-col pure-u-1 pure-u-md-1-8 pure-u-lg-1-6">
                     &nbsp;
                 </div>

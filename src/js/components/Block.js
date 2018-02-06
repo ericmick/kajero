@@ -112,7 +112,7 @@ export default class Block extends Component {
             }
         };
         return (
-            <div className="edit-box" onClick={(e) => {e.stopPropagation()}}>
+            <div className="edit-box" onMouseDown={(e) => {e.stopPropagation()}}>
                 <Codemirror value={this.state.text} options={options}
                     onChange={this.textChanged} ref="editarea" />
             </div>
